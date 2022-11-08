@@ -1,0 +1,40 @@
+package october30;
+
+public class One_deminasional_array {
+
+	public static void main(String[] args) {
+	 
+		//Declaration 
+		int[] a; // in behtarin soorate
+		int a1[];
+		int []a2;
+		int[]a3;
+		
+		int[] a4,b4; //both are 1-D array
+		int []a5,b5; //both are 1-D array
+		int[]a7,b7; // both
+		int a6[], b6; // only a6 is 1-D array. b6 is an int variable.
+		
+		//creation
+		
+		int[] a8 = new int[3];
+		System.out.println(a8.length);
+		
+		int[] a9 = new int[0];
+		System.out.println(a9.length);
+		
+		int[] a10 = new int[-1];
+		System.out.println(a10.length); // negative exception array error
+		
+		// Initialization
+		
+		int[] a12 = new int [4];
+		a12[0] = 123;
+		a12[1] = 124;
+		a12[2] = 125;
+		a12[3] = 126; // ta inja doroste age eshtebahi bezani [4] unvaght error mide Index 4 Out of Bounds for Length 4
+		
+		System.out.println(a12);
+	}
+
+}

@@ -1,0 +1,10 @@
+package october29;
+
+public class Nested_for_loop_pattern {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

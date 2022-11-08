@@ -1,0 +1,54 @@
+package october30;
+
+public class Two_Dimensional_arrays {
+
+	public static void main(String[] args) {
+		
+		//Declaration
+		int[][] a;  // always use this way
+		
+		int[] []a1; //
+		int a2[][]; //in 3ta ham doroste
+		int[] a3[]; //
+		
+		
+		int[][] a4, b4[];  //a4 is 2-D but b4 is 3-D
+		int [][] a6,b6;    // both are 2-D
+		int[] a7[], b7;     // a6 is 2-D, but b6 is 1-D
+        int[] a8[], b8[];   // both are 2-D 
+        int[][] a9, b9[];  // a9 is 2-D and b9 is 3-D
+        
+        //Creation
+        int[][] a10 = new int [2][3];
+        
+        //initialize
+        
+        int[][] a11 =new int[3][4];  //3*4 3row  4 column 
+       
+        a11[0][0] = 101;
+        a11[0][1] = 102;
+        a12[0][2] = 103;
+        a13[0][3] = 104;
+        
+        a11[1][0] = 101;
+        a11[1][1] = 102;
+        a12[1][2] = 103;
+        a13[1][3] = 104;
+        
+        a11[2][0] = 101;
+        a11[2][1] = 102;
+        a12[2][2] = 103;
+        a13[2][3] = 104;
+        
+        int[][] a12= { {1,2,3,4,5}, {4,5,6,4,6}, {2,3,5,6,1} };  //3*4
+        int[][] a13= { {1,2,3,4,5,6}, {4,5,6,4,6,3}, {2,3,5,6,1,2}, {1,2,3,4,5,6}, {1,3,5,9,8,7} };  //5*6
+        
+        //homework a14
+        
+        //retrieve
+        
+        int[][] a15= { {1,2,3,4,5}, {4,5,6,4,6}, {2,3,5,6,1} };
+        
+	}
+
+}

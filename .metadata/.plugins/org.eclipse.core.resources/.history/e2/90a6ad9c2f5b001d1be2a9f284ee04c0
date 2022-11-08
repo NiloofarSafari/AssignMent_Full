@@ -1,0 +1,45 @@
+package october29;
+
+import java.io.File;
+import java.io.IOException;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.WindowType;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.io.FileHandler;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class Taking_Screenshot {
+	 public static WebDriver driver;
+	
+
+	public static void main(String[] args) throws Exception {
+		WebDriverManager.chromiumdriver().setup();
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://openweathermap.org/");
+		
+		WebElement owmscreen = driver.findElement(By.cssSelector("div.section.where-to"));
+		File source = owmscreen.getScreenshotAs(OutputType.FILE);
+		//age bekham faghat khodam bebinam az linke pain
+		File destination = new File("C:\\Users\\annas\\eclipse-workspace\\AUTO_OCT_myself\\Screenshot\\Screenshot1.png");
+		//age bekham hame bebinan
+		//File destination1 = new File(System.getProperty("user.dir")+ "\\AUTO_OCT_myself\\Screenshot\\Screenshot1.png");
+		FileHandler.copy(source, destination);
+		
+		driver.switchTo().newWindow(WindowType.TAB);
+		driver.navigate().to("https://shaadi.com");
+		
+		WebElement shaadibanner = driver.findElement(By.cssSelector("div.css-83u8gt"));
+		File source1 = shaadibanner.getScreenshotAs(OutputType.FILE);
+		File destination1 = new File(System.getProperty("user.dir")+ "\\AUTO_OCT_myself\\Screenshot\\Screenshot1.png");
+		FileHandler.copy(source, destination);
+		
+
+	}
+
+}

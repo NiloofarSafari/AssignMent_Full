@@ -1,0 +1,36 @@
+package october30;
+
+
+import org.junit.Assert;
+import org.testng.annotations.Test;
+
+public class Dependency_operation {
+	
+	@Test()
+	public void testcase1() {
+		System.out.println("Test case1");
+		Assert.fail("Deliberately failing to show my students"); 
+		//inja miyam makhsoosan case1 ro fail mikonam baad mibinim ke baghiye testcase haro ke behesh depend boodan skip mikone (fail nemikone)
+	}
+	
+	@Test(dependsOnMethods = "testcase1" , alwaysRun = true )
+	//doroste in testcase be test case1 depend hast va test case 1ro az ghasd fail kardam vali inja dastoor midam ke harjoor hast run kon testcase2ro
+	public void testcase2() {
+		System.out.println("Test case2");
+	}
+	@Test(dependsOnMethods = {"testcase1", "testcase2"})
+	public void testcase3() {
+		System.out.println("Test case3");
+	}
+	@Test(dependsOnMethods = {"testcase1", "testcase2", "testcase3"})
+	public void testcase4() {
+		System.out.println("Test case4");
+	}
+	@Test(dependsOnMethods = {"testcase1", "testcase2", "testcase3", "testcase4"})
+	public void testcase5() {
+		System.out.println("Test case5");
+	}
+	
+
+
+}

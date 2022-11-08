@@ -1,0 +1,36 @@
+package october29;
+
+public class Nested_for_loop_pattern {
+
+	public static void main(String[] args) {
+	
+		//Nested for loop- for each execution of outer for loop, inner for loop
+		//executes completely 
+		//Pattern programming
+		pattern1();
+		pattern2();
+		//patern3(5);
+		//patern4(5);
+		
+		
+		
+
+	} static void pattern1() {
+		 
+		for (int row=1 ; row<=5 ; row++) {
+			for (int col=1 ; col<=5 ; col++) {
+				System.out.print("* ");
+			
+			}System.out.println();
+		}System.out.println("-----------------------");
+	}
+
+	static void pattern2() {
+		for (int row=1 ; row<=5 ; row++) {
+			for (int col=1 ; col<=row ; col++ ) {
+				System.out.print("* ");
+			}System.out.println();
+		}
+		System.out.println("----------------------");
+	}
+}

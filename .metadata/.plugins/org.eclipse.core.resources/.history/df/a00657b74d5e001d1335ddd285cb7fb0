@@ -1,0 +1,20 @@
+package november5;
+
+public class WrapperClass_Parsing {
+
+	public static void main(String[] args) {
+		
+		String price1 = "12.98";
+		String price2 = "7.70";
+		System.out.println(price1 + price2);  // this will concatenate
+		
+		double p1 = Double.parseDouble(price1);
+		double p2 = Double.parseDouble(price2);
+		double sum = p1 + p2;
+		
+		System.out.println(sum);
+		
+		
+	}
+
+}

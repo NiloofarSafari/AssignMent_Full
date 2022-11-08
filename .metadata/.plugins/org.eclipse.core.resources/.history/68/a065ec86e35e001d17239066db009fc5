@@ -1,0 +1,23 @@
+package november5;
+
+import org.testng.annotations.Test;
+
+public class Enabled_vs_AlwaysRun_TestNG {
+	
+	@Test(priority = 1, enabled = false , alwaysRun= true)  //tu java enabled ghavi tar az always hast. pas faghat enabled ro ejra mikone
+	public void logic1() {
+		System.out.println("First logic");
+	}
+	
+	@Test(priority = 2, dependsOnMethods = "logic1")
+	public void logic2() {
+		System.out.println("second logic");
+	}
+	
+	@Test(priority = 3, dependsOnMethods = {"logic1","logic2"})
+	public void logic3() {
+	System.out.println("third logic");
+	
+	}
+
+}

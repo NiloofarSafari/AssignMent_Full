@@ -1,0 +1,35 @@
+package november5;
+
+public class Boxing_Unboxing {
+
+	public static void main(String[] args) {
+		
+		// boxing    primitive to wrapper class
+		
+		int x = 20;
+		Integer y = Integer.valueOf(x);
+		System.out.println(y);
+		
+		// Autoboxing
+		
+		int x1 = 20;
+		Integer y1 = x1;
+		System.out.println(y1);
+		
+		//unboxing
+		
+		Integer A = 50;  //khodesh bejaye A, result neveshte bood man avazesh kardam bebinam javab migiram ya na
+		int newA = A.intValue();
+		System.out.println(newA);
+		
+		//Autounboxing
+		
+		Integer B = 40;
+		int C = B;
+		System.out.println(C);
+				
+		
+
+	}
+
+}
